@@ -1,0 +1,14 @@
+h1{--border-size: 8px;
+    --circle-size: 36px;
+    background-color: #ED544A;
+    border-bottom: 8px solid #111;
+    padding: 1rem;
+    padding-top: calc(.55 * var(--circle-size));
+    padding-bottom: calc(.55 * var(--circle-size));
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    display: block;
+    font-weight: bold;
+}

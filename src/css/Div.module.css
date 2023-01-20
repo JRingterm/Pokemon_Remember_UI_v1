@@ -1,0 +1,21 @@
+.contentsdiv {/*메뉴창 밑에부터 footer 전까지*/
+    min-width: 80vw;
+    min-height: 60vh;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    display: flex;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+.partsdiv { /*contentsdiv에 들어가는 요소*/ 
+    width:50%;
+    flex:1 1 auto;
+    
+    display: grid;
+}
