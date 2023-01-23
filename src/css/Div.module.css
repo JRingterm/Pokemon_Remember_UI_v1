@@ -8,14 +8,23 @@
     padding-right: 1rem;
     padding-top: 0;
     padding-bottom: 2rem;
-    display: flex;
+    display: grid;  /*격자모양 디스플레이*/
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*가로축 4칸제한. 비율은 1:1:1:1*/
     box-sizing: border-box;
     background-color: gray;
 }
 
+.menusdiv {
+    width: 100vw;
+    height: 5vh;
+    border: 5px black solid;
+    background-color: yellow;
+}
+
 .partsdiv { /*contentsdiv에 들어가는 요소*/ 
-    width:50%;
-    flex:1 1 auto;
-    
-    display: grid;
+    min-width:20vw;
+    min-height:40vh;
+    border:5px black solid;
+    background-color: white;
+    display: flex, grid;
 }

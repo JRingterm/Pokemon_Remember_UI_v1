@@ -12,3 +12,18 @@ h1{--border-size: 8px;
     display: block;
     font-weight: bold;
 }
+
+h2{
+    font-weight: bold;
+    font-size:2rem;
+    text-align: left;
+    color: black;
+    padding-left: 1rem;
+}
+
+p{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    padding-left: 1rem;
+}
