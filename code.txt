@@ -1,0 +1,11 @@
+<div className={divstyles.detailcontentsdiv}>
+                <h2>{detail.name}</h2>
+                <p>성격: {detail.nature}</p>
+                <p>특성: {detail.ability}</p>
+                <p>테라스탈 타입: {detail.teratype}</p>
+                <p>노력치: {detail.stats}</p>
+                <p>기술배치: {detail.skills}</p>
+                <p>아이템: {detail.item}</p>
+                <p>조정의미: {detail.description}</p>
+                <button className={btnstyles.modifybtn}>수정</button>
+            </div>

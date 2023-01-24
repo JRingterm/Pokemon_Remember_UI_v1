@@ -1,13 +1,21 @@
-.searchbtn{
+.searchbtn{ 
     min-width: 5vw;
     height: 5vh;
     font-size: 2rem;
 }
 
-.postbtn{
+.postbtn{ 
     min-width: 8vw;
     height: 5vh;
     font-size: 2rem;
     margin-left: 10vw;
+}
 
+.modifybtn{
+    min-width: 5vw;
+    height: 5vh;
+    font-size: 2rem;
+    float: right;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
 }
