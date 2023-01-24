@@ -11,7 +11,7 @@ function Pokemons({id, name, ability, teratype, stats, item, description}){
             <p>특성: {ability}</p>
             <p>테라스탈 타입: {teratype}</p>
             <p>노력치: {stats}</p>
-            <p>아이템: {item}</p>
+            <p>도구: {item}</p>
             <p>조정의미: {description}</p>
             <Link to={`/detail/${id}`}><button className={btnstyles.modifybtn}>상세</button></Link>
         </div>

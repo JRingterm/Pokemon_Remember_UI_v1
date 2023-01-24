@@ -11,7 +11,7 @@ function Pokemon({name, nature, ability, teratype, stats, skills, item, descript
             <p>테라스탈 타입: {teratype}</p>
             <p>노력치: {stats}</p>
             <p>기술배치: {skills}</p>
-            <p>아이템: {item}</p>
+            <p>도구: {item}</p>
             <p>조정의미: {description}</p>
             <button className={btnstyles.modifybtn}>수정</button>
         </div>
