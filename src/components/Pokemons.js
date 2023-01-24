@@ -7,13 +7,13 @@ import PropTypes from "prop-types";
 function Pokemons({id, name, ability, teratype, stats, item, description}){
     return(
         <div className={divstyles.partsdiv}>
-            <h2><Link to={`/detail/${id}`}>{name}</Link></h2>
+            <h2>{name}</h2>
             <p>특성: {ability}</p>
             <p>테라스탈 타입: {teratype}</p>
             <p>노력치: {stats}</p>
             <p>아이템: {item}</p>
             <p>조정의미: {description}</p>
-            <button className={btnstyles.modifybtn}>상세</button>
+            <Link to={`/detail/${id}`}><button className={btnstyles.modifybtn}>상세</button></Link>
         </div>
     );
 }
