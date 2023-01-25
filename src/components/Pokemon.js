@@ -1,10 +1,8 @@
-import {Link} from "react-router-dom";
-import divstyles from "../css/Div.module.css";
-import btnstyles from "../css/Button.module.css";
 
+//Detail.js에서 호출하는 컴포넌트. id에 해당하는 개체를 불러온다.
 function Pokemon({name, nature, ability, teratype, stats, skills, item, description}){
     return(
-        <div className={divstyles.detailcontentsdiv}>
+        <>
             <h2>{name}</h2>
             <p>성격: {nature}</p>
             <p>특성: {ability}</p>
@@ -13,8 +11,7 @@ function Pokemon({name, nature, ability, teratype, stats, skills, item, descript
             <p>기술배치: {skills}</p>
             <p>도구: {item}</p>
             <p>조정의미: {description}</p>
-            <button className={btnstyles.modifybtn}>수정</button>
-        </div>
+        </>
     );
 }
 

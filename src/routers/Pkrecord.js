@@ -3,10 +3,11 @@ import Footer from "../components/Footer";
 import styles from "../css/styles.css";
 import inputstyles from "../css/Input.module.css";
 import btnstyles from "../css/Button.module.css";
-import axios from "axios";
 import { useState, useEffect } from "react";
 import Pokemons from "../components/Pokemons";
+import { Link } from "react-router-dom";
 
+//이 프로젝트에서 Home에 해당하는 파일
 function Pkrecord() {
     const [records, setRecords] = useState([]); //api에서 받아온 데이터를 저장하는 state
     const [keyword, setKeyword] = useState(""); //검색할때 사용되는 state
@@ -45,38 +46,6 @@ function Pkrecord() {
     const onSearchClick = () => {
         getSearchRecord();
     }*/
-
-    //등록하기 버튼 누르면, 입력받고, api에 post 하도록================================================================//전부 입력해야지만 post됨.
-    const onPostClick = () => {
-        var inputname = prompt("*이름: ", "");
-        var inputnature = prompt("*성격: ");
-        var inputability = prompt("*특성: ");
-        var inputteratype = prompt("*테라스탈 타입: ");
-        var inputstats = prompt("*노력치: ");
-        var inputskills = prompt("*기술배치: ");
-        var inputitem = prompt("*도구: ");
-        var inputdescription = prompt("조정의미: ", []);
-        if (inputname && inputnature && inputability && inputteratype && inputstats && inputskills && inputitem){  
-            //api에 post하도록 axios를 설정.
-            axios({method:"POST",   
-                url: 'http://127.0.0.1:8000/pokemons/',
-                data: {
-                    name: inputname,
-                    nature: inputnature,
-                    ability: inputability,
-                    teratype: inputteratype,
-                    stats: inputstats,
-                    skills: inputskills,
-                    item: inputitem,
-                    description: inputdescription,
-                }
-            })
-            alert("성공적으로 등록되었습니다.");
-        }
-        else
-            alert("실패!");    
-    }
-
     return(
         <>
         <div className={divstyles.maindiv}>
@@ -90,7 +59,7 @@ function Pkrecord() {
                         className={inputstyles.searchinput}
                      />
                     <button className={btnstyles.searchbtn} /*onClick={onSearchClick}*/>검색</button>
-                    <button className={btnstyles.postbtn} onClick={onPostClick}>등록하기</button> {/*등록하기 버튼을 같은 form에 두는게 맞나..? 등록하기는 작동되긴 함.*/}
+                    <Link to={"/add"}><button className={btnstyles.postlinkbtn}>등록하기</button></Link> {/*등록하기 버튼을 같은 form에 두는게 맞나..? 등록하기는 작동되긴 함.*/}
                 </form>
                 
             </div>

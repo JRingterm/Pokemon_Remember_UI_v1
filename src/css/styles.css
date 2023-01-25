@@ -27,3 +27,10 @@ p{
     color: black;
     padding-left: 1rem;
 }
+
+input::placeholder {
+    color:darkgrey
+}
+textarea::placeholder {
+    color:darkgrey
+}

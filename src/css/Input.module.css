@@ -4,3 +4,20 @@
     font-size: 2rem;
     
 }
+
+.addinput{
+    min-width: 20vw;
+    min-height: 5vh;
+    font-size: 2rem;
+}
+.skillinput{
+    min-width: 30vw;
+    min-height: 5vh;
+    font-size: 2rem;
+}
+.descriptinput{
+    min-width: 50vw;
+    min-height: 20vh;
+    font-size: 2rem;
+    font-family: sans-serif;
+}

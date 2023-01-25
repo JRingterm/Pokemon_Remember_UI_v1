@@ -11,7 +11,7 @@
     display: grid;  /*격자모양 디스플레이*/
     grid-template-columns: 1fr 1fr 1fr 1fr; /*가로축 4칸제한. 비율은 1:1:1:1*/
     box-sizing: border-box;
-    background-color: gray;
+    background-color: purple;
 }
 
 .menusdiv {
@@ -29,7 +29,7 @@
     display: flex, grid;
 }
 
-.detailcontentsdiv{
+.detailcontentsdiv{ /*상세조회 div*/
     min-width: 80vw;
     min-height: 60vh;
     flex-direction: row;
@@ -42,5 +42,21 @@
     display: flex, grid;  /*격자모양 디스플레이*/
     grid-template-columns: 1fr 1fr 1fr; /*가로축 4칸제한. 비율은 1:1:1:1*/
     box-sizing: border-box;
-    background-color: gray;
+    background-color: darkgrey;
+}
+
+.addcontentsdiv{
+    min-width: 80vw;
+    min-height: 60vh;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    display: grid;  /*격자모양 디스플레이*/
+    grid-template-columns: 1fr 1fr; /*가로축 4칸제한. 비율은 1:1:1:1*/
+    box-sizing: border-box;
+    background-color: rgb(187, 4, 187);
 }

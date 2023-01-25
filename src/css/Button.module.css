@@ -4,11 +4,17 @@
     font-size: 2rem;
 }
 
-.postbtn{ 
+.postlinkbtn{ 
     min-width: 8vw;
     height: 5vh;
     font-size: 2rem;
     margin-left: 10vw;
+}
+.postbtn{
+    min-width: 8vw;
+    height: 5vh;
+    font-size: 2rem;
+    margin-top: 1vw;
 }
 
 .modifybtn{
@@ -18,4 +24,5 @@
     float: right;
     margin-right: 1vw;
     margin-bottom: 1vw;
+
 }
