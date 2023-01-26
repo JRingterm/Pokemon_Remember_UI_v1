@@ -5,7 +5,7 @@ function Footer() {
         <footer className={styles.footer}>
             <hr />
             <div>
-                <p>ghwns3712@naver.com</p>
+                <p>제작자: 젤리젤링텀, 이메일: ghwns3712@naver.com</p>
             </div>
         </footer>
     )

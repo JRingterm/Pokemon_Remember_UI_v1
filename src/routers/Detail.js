@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import divstyles from "../css/Div.module.css";
 import btnstyles from "../css/Button.module.css";
 import { useParams, Link } from "react-router-dom";
-import { useEffect, useCallback, useState } from "react";
+import { useEffect, useState } from "react";
 import Pokemon from "../components/Pokemon";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ function Detail() {
         ).json();
         setDetail(detailjson);
     };
-    console.log(detail);//api가 state에 잘 들어갔나 확인
+    //console.log(detail);//api가 state에 잘 들어갔나 확인
     useEffect(() => {
         getPokemonDetail();
     },[]);

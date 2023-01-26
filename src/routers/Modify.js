@@ -2,8 +2,8 @@ import Footer from "../components/Footer";
 import divstyles from "../css/Div.module.css";
 import btnstyles from "../css/Button.module.css";
 import inputstyles from "../css/Input.module.css";
-import { useParams, Link } from "react-router-dom";
-import { useEffect, useCallback, useState } from "react";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 //상세사항 페이지에서 수정 버튼을 누르면, /modify/:id로 이동하면서 Modify.js를 불러옴
@@ -16,7 +16,7 @@ function Modify() {
         ).json();
         setDetail(detailjson);
     };
-    console.log(detail);//api가 state에 잘 들어갔나 확인
+    //console.log(detail);//api가 state에 잘 들어갔나 확인
     useEffect(() => {
         getPokemonDetail();
     },[]);

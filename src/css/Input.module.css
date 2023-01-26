@@ -1,21 +1,20 @@
-.searchinput{
+.searchinput{ /*검색 입력창*/
     width: 20vw;
     height: 5vh;
     font-size: 2rem;
-    
 }
 
-.addinput{
+.addinput{ /*등록 입력창*/
     min-width: 20vw;
     min-height: 5vh;
     font-size: 2rem;
 }
-.skillinput{
+.skillinput{ /*등록 기술배치 입력창*/
     min-width: 30vw;
     min-height: 5vh;
     font-size: 2rem;
 }
-.descriptinput{
+.descriptinput{ /*등록 조정의미 입력창*/
     min-width: 50vw;
     min-height: 20vh;
     font-size: 2rem;

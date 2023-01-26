@@ -21,10 +21,16 @@ function Pkrecord() {
     useEffect(() => { //api는 한번만 불러오도록
         getRecord();
     },[]);
-    console.log(records);
+    //console.log(records);
  
-    //keyword state가 변경될 수 있도록.
+    //keyword state가 변경될 수 있도록 이벤트 설정.
     const onChange = (event) => setKeyword(event.target.value);
+    //keyword state가 비어있지 않고, 1글자 이상일 때만 검색하라
+    useEffect(() => {
+        if (keyword !== "" && keyword.length >= 1) {
+            console.log("Search for", keyword);
+        }
+    },[keyword])
 
     //이벤트를 명시적으로 처리하지 않은경우, 디폴트동작을 실행하지 않도록.
     const onSubmit = (event) => {
@@ -33,19 +39,6 @@ function Pkrecord() {
             return;
         }
     }
-    //검색창에 이름 입력하고, 검색버튼 누르면 그 이름에 해당하는 api만 찾아오고싶은데..===========
-    /*const getSearchRecord = async() => { 
-        const json = await(
-            await fetch(`http://127.0.0.1:8000/pokemons?name=${keyword}/`)
-        ).json();
-        setRecords(json);
-    };
-    useEffect(() => {
-        getSearchRecord();
-    },[keyword])
-    const onSearchClick = () => {
-        getSearchRecord();
-    }*/
     return(
         <>
         <div className={divstyles.maindiv}>
@@ -58,12 +51,10 @@ function Pkrecord() {
                         placeholder="포켓몬 이름으로 검색하기"
                         className={inputstyles.searchinput}
                      />
-                    <button className={btnstyles.searchbtn} /*onClick={onSearchClick}*/>검색</button>
+                    <Link to={`/search/${keyword}`}><button className={btnstyles.searchbtn}>검색</button></Link>
                     <Link to={"/add"}><button className={btnstyles.postlinkbtn}>등록하기</button></Link> {/*등록하기 버튼을 같은 form에 두는게 맞나..? 등록하기는 작동되긴 함.*/}
                 </form>
-                
             </div>
-            
             <div className={divstyles.contentsdiv}>
                 {records.map((record) =>
                     <Pokemons //api에서 가져온 값을 props로 Pokemons 컴포넌트에 넘김
@@ -78,10 +69,7 @@ function Pkrecord() {
                     />
                 )}
             </div>
-            
-
         </div>
-
         <Footer />
         </>
     );

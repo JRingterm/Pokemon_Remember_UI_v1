@@ -1,28 +1,27 @@
-.searchbtn{ 
+.searchbtn{ /*검색버튼*/
     min-width: 5vw;
     height: 5vh;
     font-size: 2rem;
 }
 
-.postlinkbtn{ 
+.postlinkbtn{  /*메인화면 등록하기 버튼*/
     min-width: 8vw;
     height: 5vh;
     font-size: 2rem;
     margin-left: 10vw;
 }
-.postbtn{
+.postbtn{ /*등록화면 등록하기 버튼*/
     min-width: 8vw;
     height: 5vh;
     font-size: 2rem;
     margin-top: 1vw;
 }
 
-.modifybtn{
+.modifybtn{ /*수정버튼*/
     min-width: 5vw;
     height: 5vh;
     font-size: 2rem;
     float: right;
     margin-right: 1vw;
     margin-bottom: 1vw;
-
 }
