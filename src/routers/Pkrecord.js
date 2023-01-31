@@ -14,7 +14,7 @@ function Pkrecord() {
     //api에서 데이터 받아오기==========================================================================
     const getRecord = async() => { 
         const json = await(
-            await fetch("http://127.0.0.1:8000/pokemons/")
+            await fetch("http://34.64.59.111:8000/pokemons/")  //gcp로 서버를 열어서 주소 변경
         ).json();
         setRecords(json);
     };
