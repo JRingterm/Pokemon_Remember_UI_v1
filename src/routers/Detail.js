@@ -12,7 +12,7 @@ function Detail() {
     const [detail, setDetail] = useState(""); //useState를 ""로 초기화 안해주니까 Uncaught TypeError: Cannot read properties 오류 발생.
     const getPokemonDetail = async () => { //id에 해당하는 api를 불러옴
         const detailjson = await(
-            await fetch(`http://34.64.59.111:8000/pokemons/${id}/`)
+            await fetch(`http://34.64.224.17:8000/pokemons/${id}/`)
         ).json();
         setDetail(detailjson);
     };
@@ -25,7 +25,7 @@ function Detail() {
         if(!window.confirm("정말 삭제하시겠습니까?")){
             
         }else{
-            axios.delete(`http://34.64.59.111:8000/pokemons/${id}/`);
+            axios.delete(`http://34.64.224.17:8000/pokemons/${id}/`);
             alert("삭제되었습니다.");
             window.location.href = "/"; //alert에서 확인을 누르면 메인페이지로 돌아감
         }

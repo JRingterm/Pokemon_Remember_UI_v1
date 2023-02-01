@@ -9,7 +9,7 @@ function Search() {
     const [pokemons, setPokemons] = useState([]);
     const getNamepokemon = async () => { //id에 해당하는 api를 불러옴
         const detailjson = await(
-            await fetch(`http://34.64.59.111:8000/pokemons/?name=${name}`) //DRF에서 filter로 구현한 필터링
+            await fetch(`http://34.64.224.17:8000/pokemons/?name=${name}`) //DRF에서 filter로 구현한 필터링
         ).json();
         setPokemons(detailjson);
     };

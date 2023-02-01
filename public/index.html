@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--GCP에서 배포한 api가 http라서 https인 리액트에서는 받아오지 못하는 문제를 해결하기 위해 추가 -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

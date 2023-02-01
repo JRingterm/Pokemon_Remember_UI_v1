@@ -9,19 +9,19 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/detail/:id">
+        <Route path={`${process.env.PUBLIC_URL}/detail/:id`}>
           <Detail />
         </Route>
-        <Route path="/add">
+        <Route path={`${process.env.PUBLIC_URL}/add`}>
           <Add />
         </Route>
-        <Route path="/modify/:id">
+        <Route path={`${process.env.PUBLIC_URL}/modify/:id`}>
           <Modify />
         </Route>
-        <Route path="/search/:name">
+        <Route path={`${process.env.PUBLIC_URL}/search/:name`}>
           <Search />
         </Route>
-        <Route path="/">
+        <Route path={`${process.env.PUBLIC_URL}/`}>
           <Pkrecord />
         </Route>
         

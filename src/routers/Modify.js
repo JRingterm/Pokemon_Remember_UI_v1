@@ -12,7 +12,7 @@ function Modify() {
     const [detail, setDetail] = useState(""); //useState를 ""로 초기화 안해주니까 Uncaught TypeError: Cannot read properties 오류 발생.
     const getPokemonDetail = async () => { //id에 해당하는 api를 불러옴
         const detailjson = await(
-            await fetch(`http://34.64.59.111:8000/pokemons/${id}/`)
+            await fetch(`http://34.64.224.17:8000/pokemons/${id}/`)
         ).json();
         setDetail(detailjson);
     };
@@ -26,7 +26,7 @@ function Modify() {
         if(!window.confirm("정말 수정하시겠습니까?")){
             
         }else{
-            axios.put(`http://34.64.59.111:8000/pokemons/${id}/`, {
+            axios.put(`http://34.64.224.17:8000/pokemons/${id}/`, {
                 name: event.target.name.value,
                 nature: event.target.nature.value,
                 ability: event.target.ability.value,

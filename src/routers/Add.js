@@ -22,7 +22,7 @@ function Add() {
             
         }else{
             axios({method:"POST",   //api에 Post
-            url: 'http://34.64.59.111:8000/pokemons/',
+            url: 'http://34.64.224.17:8000/pokemons/',
             data: {
                 name: event.target.name.value,
                 nature: event.target.nature.value,
